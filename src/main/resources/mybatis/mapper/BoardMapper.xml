@@ -10,4 +10,22 @@
         values
         (#{title},#{ctnt},#{writer})
     </insert>
+
+<!--    <update id = "updBoard">-->
+<!--        Update t_board-->
+<!--        (title,ctnt,writer)-->
+<!--        set-->
+<!--        (#{title},#{ctnt},#{writer})-->
+<!--    </update>-->
+
+    <update id = "updBoard" parameterType="BoardEntity">
+        UPDATE t_board
+
+        SET title = #{title}
+        , ctnt = #{ctnt}
+        , writer = #{writer}
+        , updated_at = current_timestamp
+
+        WHERE iboard = #{iboard}
+    </update>
 </mapper>

@@ -15,7 +15,13 @@ public class BoardService {
 
     public int insBoard(BoardEntity entity){
         System.out.println("service-insBoard");
-        mapper.insBoard(entity);
-        return 1;
+        return mapper.insBoard(entity);
+
+    }
+
+    public int updBoard(BoardEntity entity){
+        System.out.println("service-updBoard");
+        return mapper.updBoard(entity);
+
     }
 }
